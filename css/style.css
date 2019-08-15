@@ -1,0 +1,167 @@
+/* Homepage Styles */
+
+.bg {
+	background: url(../img/digimon-bg.jpg);
+	background-size: cover;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.cards-container {
+	padding-top: 350px;
+}
+
+.choose-card-logo {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* Buttons */
+
+.btn {
+	margin-top: 20px;
+	margin-left: 20px;
+	font-family: 'Permanent Marker', cursive;
+	width: 100px;
+	border-color: #fff;
+}
+
+.btn a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* NES BTNS */
+
+.nes-btn.is.primary::after {
+	box-shadow: inset -6px -6px #006bb3; 
+}
+
+.nes-btn.is-primary:focus,
+.nes-btn.is-primary:hover {
+	background-color: #5bc0ff;
+}
+
+
+/* Light Page */
+
+.bg-light {
+	background: url(../img/light-cards-bg.jpg);
+	background-size: contain;
+	background-attachment: fixed;
+	
+	margin: 0 auto;
+}
+
+.light-logo {
+	width: 90%;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+.return {
+	display: block;
+	text-align: center;
+	margin-bottom: 50px;
+	width: 150px;
+}
+
+.bottom-btn {
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/* Dark Page */
+
+.bg-dark {
+	background: url(../img/dark-cards-bg.jpg);
+	color: #878787;
+}
+
+/* Base Styles */
+
+body {
+  color: #fff;
+}
+
+.card-text {
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+
+.card-heading {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+.bold-text {
+    font-weight: 900;
+}
+
+.digimon-img, .card-heading, p {
+	margin-left: -20px;
+}
+
+.digimon-img {
+  width: 50%;
+}
+
+/* Card Styles */
+
+  /* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back, .back-dark {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back, .back-dark {
+  margin: 0 auto;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+  left: 0;
+  /* transform-origin: center; */
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+	background: url(../img/card-back-bg-2.png) no-repeat;
+
+}
+
+.back-dark {
+	transform: rotateY(180deg);
+	background: url(../img/card-back-bg-dark.png) no-repeat;
+}
