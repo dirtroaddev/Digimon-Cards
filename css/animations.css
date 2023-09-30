@@ -1,7 +1,8 @@
 /* animation sets */
 
 /* move from / to  */
-
+/* fixed an error in the design code */
+/* solved all of the issues */
 .pt-page-moveToLeft {
 	-webkit-animation: moveToLeft .6s ease both;
 	animation: moveToLeft .6s ease both;
